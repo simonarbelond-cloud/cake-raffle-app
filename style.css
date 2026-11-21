@@ -133,9 +133,11 @@ body {
     text-align: left; /* Aligns participant names to the left */
 }
 
-/* Styles the draw button section */
+/* Styles the draw and reset button section */
 .draw-section {
-    margin-bottom: 25px; /* Adds space below the draw button */
+    display: flex; /* Places the buttons next to each other */
+    gap: 12px; /* Adds space between the buttons */
+    margin-bottom: 25px; /* Adds space below the buttons */
 }
 
 /* Styles the main draw button */
@@ -144,11 +146,11 @@ body {
     color: #ffffff; /* Makes the button text white */
     border: none; /* Removes the default border */
     border-radius: 30px; /* Makes the button rounded */
-    padding: 16px 30px; /* Adds space inside the button */
+    padding: 16px 20px; /* Adds space inside the button */
     font-size: 18px; /* Makes the button text larger */
     font-weight: bold; /* Makes the button text bold */
     cursor: pointer; /* Shows a pointer when hovering */
-    width: 100%; /* Makes the button fill the section */
+    flex: 1; /* Allows the button to use available space */
     transition: background-color 0.3s ease; /* Smooths the hover effect */
 }
 
@@ -161,6 +163,24 @@ body {
 .draw-button:disabled {
     background-color: #cccccc; /* Makes the button gray */
     cursor: not-allowed; /* Shows that the button cannot be clicked */
+}
+
+/* Styles the reset button */
+.reset-button {
+    background-color: #007bff; /* Sets the requested blue background */
+    color: #ffffff; /* Makes the button text white */
+    border: none; /* Removes the default border */
+    border-radius: 30px; /* Makes the button rounded */
+    padding: 16px 25px; /* Adds space inside the button */
+    font-size: 18px; /* Sets the button text size */
+    font-weight: bold; /* Makes the button text bold */
+    cursor: pointer; /* Shows a pointer when hovering */
+    transition: background-color 0.3s ease; /* Smooths the hover effect */
+}
+
+/* Changes the reset button color when the user hovers */
+.reset-button:hover {
+    background-color: #1367c0; /* Sets the requested hover color */
 }
 
 /* Styles the winner display section */
@@ -182,22 +202,38 @@ body {
 
 /* Adjusts the layout for mobile screens */
 @media (max-width: 600px) {
+
+    /* Reduces header spacing on mobile */
     .header {
-        padding: 25px 15px; /* Reduces header spacing on mobile */
+        padding: 25px 15px;
     }
 
+    /* Makes the title smaller on mobile */
     .header h1 {
-        font-size: 30px; /* Makes the title smaller on mobile */
+        font-size: 30px;
     }
 
+    /* Reduces container padding on mobile */
     .raffle-container {
-        padding: 20px; /* Reduces container padding on mobile */
-        margin: 20px auto; /* Adjusts outside spacing */
+        padding: 20px;
+        margin: 20px auto;
     }
 
+    /* Reduces section padding on mobile */
     .entry-section,
     .participants-section,
     .winner-section {
-        padding: 18px; /* Reduces section padding on mobile */
+        padding: 18px;
+    }
+
+    /* Stacks the draw and reset buttons vertically on mobile */
+    .draw-section {
+        flex-direction: column;
+    }
+
+    /* Makes both buttons fill the available width */
+    .draw-button,
+    .reset-button {
+        width: 100%;
     }
 }

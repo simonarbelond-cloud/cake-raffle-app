@@ -1,0 +1,203 @@
+
+/* Applies the box-sizing rule to all elements */
+* {
+    box-sizing: border-box; /* Includes padding and borders in element widths */
+}
+
+/* Styles the main page */
+body {
+    background-color: #fff0f5; /* Sets a light pink background */
+    font-family: Arial, sans-serif; /* Uses a simple and readable font */
+    margin: 0; /* Removes default page margins */
+    padding: 0; /* Removes default page padding */
+    color: #333333; /* Sets the main text color */
+}
+
+/* Styles the application header */
+.header {
+    background-color: #ff4081; /* Sets the vibrant pink header background */
+    color: #ffffff; /* Makes the header text white */
+    text-align: center; /* Centers the header content */
+    padding: 35px 20px; /* Adds space inside the header */
+}
+
+/* Styles the main header title */
+.header h1 {
+    font-size: 38px; /* Makes the title large */
+    margin: 0 0 10px; /* Adds space below the title */
+}
+
+/* Styles the header description */
+.header p {
+    font-size: 17px; /* Sets the description text size */
+    margin: 0; /* Removes default paragraph margins */
+}
+
+/* Styles the main raffle container */
+.raffle-container {
+    background-color: #ffffff; /* Gives the container a white background */
+    max-width: 650px; /* Limits the container width */
+    width: 90%; /* Makes the container responsive */
+    margin: 35px auto; /* Centers the container on the page */
+    padding: 30px; /* Adds space inside the container */
+    border-radius: 16px; /* Rounds the container corners */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12); /* Adds a soft shadow */
+    text-align: center; /* Centers the content */
+}
+
+/* Styles the headings inside each section */
+.raffle-container h2 {
+    color: #8e24aa; /* Sets a complementary purple color */
+    margin-top: 0; /* Removes extra space above headings */
+}
+
+/* Styles the participant entry section */
+.entry-section {
+    background-color: #fff0f5; /* Adds a light pink background */
+    padding: 25px; /* Adds space inside the section */
+    border-radius: 12px; /* Rounds the section corners */
+    margin-bottom: 25px; /* Adds space below the section */
+}
+
+/* Styles the participant name label */
+.entry-section label {
+    display: block; /* Places the label on its own line */
+    text-align: left; /* Aligns the label to the left */
+    font-weight: bold; /* Makes the label bold */
+    margin-bottom: 8px; /* Adds space below the label */
+}
+
+/* Styles the participant name input */
+.entry-section input {
+    width: 100%; /* Makes the input fill the available width */
+    padding: 13px; /* Adds space inside the input */
+    border: 2px solid #ff80ab; /* Adds a pink border */
+    border-radius: 8px; /* Rounds the input corners */
+    font-size: 16px; /* Makes the input text readable */
+    margin-bottom: 15px; /* Adds space below the input */
+}
+
+/* Highlights the input when the user selects it */
+.entry-section input:focus {
+    outline: none; /* Removes the default browser outline */
+    border-color: #8e24aa; /* Changes the border to purple */
+}
+
+/* Styles the add participant button */
+.add-button {
+    background-color: #8e24aa; /* Sets a purple button background */
+    color: #ffffff; /* Makes the button text white */
+    border: none; /* Removes the default border */
+    border-radius: 8px; /* Rounds the button corners */
+    padding: 13px 20px; /* Adds space inside the button */
+    font-size: 16px; /* Sets the button text size */
+    font-weight: bold; /* Makes the button text bold */
+    cursor: pointer; /* Shows a pointer when hovering */
+    width: 100%; /* Makes the button fill the available width */
+    transition: background-color 0.3s ease; /* Smooths the hover effect */
+}
+
+/* Changes the add button color when the user hovers */
+.add-button:hover {
+    background-color: #6a1b9a; /* Makes the button darker purple */
+}
+
+/* Styles the participants list section */
+.participants-section {
+    background-color: #f3e5f5; /* Adds a light purple background */
+    padding: 25px; /* Adds space inside the section */
+    border-radius: 12px; /* Rounds the section corners */
+    margin-bottom: 25px; /* Adds space below the section */
+}
+
+/* Styles the participant count */
+#participant-count {
+    color: #666666; /* Uses a soft gray text color */
+    font-size: 14px; /* Makes the count slightly smaller */
+}
+
+/* Styles the participants list */
+#participants-list {
+    list-style: none; /* Removes the default list bullets */
+    padding: 0; /* Removes default list padding */
+    margin: 15px 0 0; /* Adds space above the list */
+}
+
+/* Styles each participant name */
+#participants-list li {
+    background-color: #ffffff; /* Gives each name a white background */
+    padding: 12px; /* Adds space around each name */
+    margin-bottom: 8px; /* Adds space between names */
+    border-radius: 8px; /* Rounds each participant item */
+    border-left: 5px solid #ff4081; /* Adds a pink detail on the left */
+    text-align: left; /* Aligns participant names to the left */
+}
+
+/* Styles the draw button section */
+.draw-section {
+    margin-bottom: 25px; /* Adds space below the draw button */
+}
+
+/* Styles the main draw button */
+.draw-button {
+    background-color: #ff4081; /* Sets a vibrant pink button background */
+    color: #ffffff; /* Makes the button text white */
+    border: none; /* Removes the default border */
+    border-radius: 30px; /* Makes the button rounded */
+    padding: 16px 30px; /* Adds space inside the button */
+    font-size: 18px; /* Makes the button text larger */
+    font-weight: bold; /* Makes the button text bold */
+    cursor: pointer; /* Shows a pointer when hovering */
+    width: 100%; /* Makes the button fill the section */
+    transition: background-color 0.3s ease; /* Smooths the hover effect */
+}
+
+/* Changes the draw button color when the user hovers */
+.draw-button:hover {
+    background-color: #d81b60; /* Changes the button to a darker pink */
+}
+
+/* Styles the draw button when it is disabled */
+.draw-button:disabled {
+    background-color: #cccccc; /* Makes the button gray */
+    cursor: not-allowed; /* Shows that the button cannot be clicked */
+}
+
+/* Styles the winner display section */
+.winner-section {
+    background-color: #fff3e0; /* Adds a light orange background */
+    padding: 25px; /* Adds space inside the section */
+    border: 2px dashed #ff9800; /* Adds a festive dashed border */
+    border-radius: 12px; /* Rounds the section corners */
+}
+
+/* Styles the winner name display */
+#winner-display {
+    color: #d81b60; /* Makes the winner name dark pink */
+    font-size: 24px; /* Makes the winner name large */
+    font-weight: bold; /* Makes the winner name bold */
+    margin-top: 15px; /* Adds space above the winner name */
+    overflow-wrap: anywhere; /* Prevents long names from overflowing */
+}
+
+/* Adjusts the layout for mobile screens */
+@media (max-width: 600px) {
+    .header {
+        padding: 25px 15px; /* Reduces header spacing on mobile */
+    }
+
+    .header h1 {
+        font-size: 30px; /* Makes the title smaller on mobile */
+    }
+
+    .raffle-container {
+        padding: 20px; /* Reduces container padding on mobile */
+        margin: 20px auto; /* Adjusts outside spacing */
+    }
+
+    .entry-section,
+    .participants-section,
+    .winner-section {
+        padding: 18px; /* Reduces section padding on mobile */
+    }
+}

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cake Raffle App</title>
+
+    <!-- Connects the CSS file to the HTML page -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connects the JavaScript file and waits for the HTML to load -->
+    <script src="actions.js" defer></script>
+</head>
+<body>
+
+    <!-- Header section of the application -->
+    <header class="header">
+        <h1>🎂 Cake Raffle</h1>
+        <p>Enter your name and get ready to win!</p>
+    </header>
+
+    <!-- Main container holding all raffle sections -->
+    <main class="raffle-container">
+
+        <!-- Participant entry form section -->
+        <section class="entry-section">
+            <h2>Enter the Raffle</h2>
+
+            <!-- Form used to add participants -->
+            <form id="participant-form">
+
+                <!-- Label for the name input -->
+                <label for="participant-name">Participant Name:</label>
+
+                <!-- Input where the participant enters their name -->
+                <input
+                    type="text"
+                    id="participant-name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <!-- Button that adds the participant -->
+                <button type="submit" class="add-button">
+                    Add Participant
+                </button>
+            </form>
+        </section>
+
+        <!-- Participants list section -->
+        <section class="participants-section">
+            <h2>Participants</h2>
+
+            <!-- Displays the number of registered participants -->
+            <p id="participant-count">0 participants registered</p>
+
+            <!-- JavaScript will add participant names to this list -->
+            <ul id="participants-list"></ul>
+        </section>
+
+        <!-- Draw button section -->
+        <section class="draw-section">
+            <button id="draw-button" class="draw-button" type="button">
+                🎉 DRAW WINNER 🎉
+            </button>
+        </section>
+
+        <!-- Winner display section -->
+        <section class="winner-section">
+            <h2>The Winner Is...</h2>
+
+            <!-- JavaScript displays the winner's name here -->
+            <div id="winner-display">
+                🎂 Waiting for the draw!
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
